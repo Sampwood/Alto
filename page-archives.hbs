@@ -1,0 +1,82 @@
+{{!< default}}
+
+<div class="content-area">
+    <div>{{{block "archives"}}}</div>
+    <main class="site-main">
+        {{#get "posts" limit=@config.posts_per_page page=pagination.page}}
+            <div class="post-feed container medium">
+                <div class="archive-page-counter">
+                    好! 目前共计&nbsp;{{pagination.total}}&nbsp;篇日志。 继续努力。
+                </div>
+                    {{#foreach posts visibility="all"}}
+                        <article class="feed {{post_class}}">
+                            <div class="feed-calendar">
+                                <div class="feed-calendar-month">
+                                    {{date published_at format="MM"}}
+                                </div>-
+                                <div class="feed-calendar-day">
+                                    {{date published_at format="DD"}}
+                                </div>
+                            </div>
+                            <h2 class="feed-title">{{title}}</h2>
+                            <div class="feed-right">
+                                {{#if featured}}
+                                    <svg class="icon feed-visibility">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                {{/if}}
+                                <div class="feed-length">
+                                    {{reading_time}}
+                                </div>
+                                
+                            </div>
+                            <svg class="icon feed-icon">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                            <a class="feed-permalink" href="{{url}}" aria-label="{{title}}"></a>
+                        </article>
+                    {{/foreach}}
+                
+            </div>
+
+            {{pagination}}
+
+            <div class="infinite-scroll-action">
+                <button class="button button-secondary infinite-scroll-button">Load more</button>
+            </div>
+        {{/get}}
+    </main>
+</div>
+
+{{#contentFor "scripts"}}
+<script>
+    function archivesPagination() {
+        'use strict';
+        var wrapper = $('.post-feed');
+
+        wrapper.infiniteScroll({
+            append: '.feed',
+            button: '.infinite-scroll-button',
+            debug: false,
+            hideNav: '.pagination',
+            history: false,
+            path: '.pagination .older-posts',
+            scrollThreshold: false,
+            status: '.infinite-scroll-status'
+        });
+
+        wrapper.on('append.infiniteScroll', function (
+            event,
+            response,
+            path,
+            items
+        ) {
+            $(items[0]).addClass('feed-paged');
+        });
+    }
+    
+    $(function () {
+        archivesPagination();
+    });
+</script>
+{{/contentFor}}

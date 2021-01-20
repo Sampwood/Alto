@@ -1,0 +1,144 @@
+.archive-page-counter {
+  margin-bottom: 2rem;
+}
+
+.feed {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0.9375rem 0;
+  line-height: 1;
+}
+
+.feed.post {
+  margin-bottom: 0;
+}
+
+.feed:hover .feed-title {
+  opacity: 0.8;
+}
+
+.feed:hover .feed-right {
+  margin-right: 1rem;
+}
+
+.feed:hover .feed-icon {
+  transform: translateX(0.25rem);
+}
+
+.feed + .feed {
+  border-top: 1px solid var(--light-gray-color);
+}
+
+.feed + .feed.feed-paged {
+  margin-top: 1.875rem;
+  border-top: 0;
+}
+
+.feed-calendar {
+  display: flex;
+  margin-right: 0.9375rem;
+  min-width: 45px;
+  color: var(--brand-color);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.feed-calendar-month {
+  text-transform: uppercase;
+}
+
+.feed-title {
+  flex-grow: 1;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-right: 0.625rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.feed-right {
+  display: flex;
+  align-items: center;
+  transition: margin 0.2s var(--animation-base);
+}
+
+.feed-visibility {
+  margin-right: 0.625rem;
+  width: 16px;
+  height: 16px;
+  color: var(--orange-color);
+}
+
+.feed-visibility-public {
+  display: none;
+}
+
+.feed-length {
+  color: var(--secondary-text-color);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.feed-icon {
+  position: absolute;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  color: var(--secondary-text-color);
+  transition: transform 0.2s var(--animation-base);
+  transform: translateX(1.25rem);
+}
+
+.feed-permalink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  outline: none;
+}
+
+/* .pagination,
+.infinite-scroll-status,
+body:not(.paged-next) .infinite-scroll-button {
+    display: none;
+} */
+
+.infinite-scroll-request {
+  margin: 1.875rem auto 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--darker-gray-color);
+  border-radius: 50%;
+  animation: scaleOut 1s infinite ease-in-out;
+}
+
+.infinite-scroll-action {
+  display: flex;
+  justify-content: center;
+}
+
+.infinite-scroll-button {
+  margin-top: 2.8125rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  height: 36px;
+  outline: none;
+  border: 1px solid var(--mid-gray-color);
+  color: var(--brand-color);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background-color: var(--white-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
