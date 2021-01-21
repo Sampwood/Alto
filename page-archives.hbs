@@ -10,7 +10,7 @@
                 </div>
                 <div id="archivePage">
                     {{#foreach posts visibility="all"}}
-                        <li class="archiveList--item feed {{post_class}}" data-date="{{date published_at format="MMMM-YYYY"}}">
+                        <li class="archiveList--item feed {{post_class}}" data-date="{{date published_at format="YYYY"}}">
                             <div class="feed-calendar">
                                 <div class="feed-calendar-month">
                                     {{date published_at format="MM"}}
@@ -65,8 +65,9 @@
             };
             
             $('.archiveList').each(function() { 
-                var month = $(this).children().first().data('date').replace("-"," ");
-                $(this).attr('data-date', month);
+                var year = $(this).children().first().data('date');
+                $(this).attr('data-date', year);
+                $( "<h2>" + year + "</h2>" ).insertBefore( this );
             });
         };
     })
