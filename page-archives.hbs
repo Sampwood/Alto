@@ -3,13 +3,14 @@
 <div class="content-area">
     <div>{{{block "archives"}}}</div>
     <main class="site-main">
-        {{#get "posts" limit=@config.posts_per_page page=pagination.page}}
+        {{#get "posts" limit="all"}}
             <div class="post-feed container medium">
                 <div class="archive-page-counter">
                     好! 目前共计&nbsp;{{pagination.total}}&nbsp;篇日志。 继续努力。
                 </div>
+                <div id="archivePage">
                     {{#foreach posts visibility="all"}}
-                        <article class="feed {{post_class}}">
+                        <li class="archiveList--item feed {{post_class}}" data-date="{{date published_at format="MMMM-YYYY"}}">
                             <div class="feed-calendar">
                                 <div class="feed-calendar-month">
                                     {{date published_at format="MM"}}
@@ -34,21 +35,45 @@
                                 <use xlink:href="#chevron-right"></use>
                             </svg>
                             <a class="feed-permalink" href="{{url}}" aria-label="{{title}}"></a>
-                        </article>
+                        </li>
                     {{/foreach}}
-                
+                </div>
             </div>
 
-            {{pagination}}
+            {{!-- {{pagination}}
 
             <div class="infinite-scroll-action">
                 <button class="button button-secondary infinite-scroll-button">Load more</button>
-            </div>
+            </div> --}}
         {{/get}}
     </main>
 </div>
 
 {{#contentFor "scripts"}}
+<script>
+    $(document).ready(function(){
+        if($('#archivePage').length){
+            var $item = $('.archiveList--item'),
+                dates = {};
+            
+            $item.each(function(){
+                dates[$(this).data('date')] = '';
+            });
+                    
+            for (date in dates) {
+                $item.filter('[data-date='+ date +']').wrapAll('<ul class="archiveList"></ul>');
+            };
+            
+            $('.archiveList').each(function() { 
+                var month = $(this).children().first().data('date').replace("-"," ");
+                $(this).attr('data-date', month);
+            });
+        };
+    })
+</script>
+{{/contentFor}}
+
+{{!-- {{#contentFor "scripts"}}
 <script>
     function archivesPagination() {
         'use strict';
@@ -79,4 +104,4 @@
         archivesPagination();
     });
 </script>
-{{/contentFor}}
+{{/contentFor}} --}}
