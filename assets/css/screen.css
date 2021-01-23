@@ -24,6 +24,7 @@
 @import "blog/comment.css";
 @import "blog/archive.css";
 @import "blog/tag.css";
+@import "blog/code.css";
 @import "vendor/mdi.css";
 @import "vendor/slicknav.css";
 @import "vendor/owl.css";

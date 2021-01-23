@@ -27,7 +27,7 @@ function handleError(done) {
         }
         return done(err);
     };
-};
+}
 
 function hbs(done) {
     pump([

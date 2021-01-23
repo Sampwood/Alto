@@ -1,0 +1,402 @@
+code {
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: #c7254e;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: #f8f5ec !important;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+.hljs {
+  margin: 1em 0;
+  padding: 30px 7px 10px !important;
+  border-radius: 5px;
+  overflow-x: auto;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+  position: relative;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* .hljs table {
+  position: relative;
+  max-width: none;
+} */
+
+.hljs table::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 2px 7px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #b1b1b1;
+  background: #f4efe1;
+  content: 'Code';
+}
+
+.hljs.html > table::after {
+  content: "HTML";
+}
+
+.hljs.html > figcaption > span::after {
+  content: " · HTML";
+}
+
+.hljs.html figcaption + table::after {
+  display: none;
+}
+
+.hljs.javascript > table::after {
+  content: "JavaScript";
+}
+
+.hljs.javascript > figcaption > span::after {
+  content: " · JavaScript";
+}
+
+.hljs.javascript figcaption + table::after {
+  display: none;
+}
+
+.hljs.bash > table::after {
+  content: "Bash";
+}
+
+.hljs.bash > figcaption > span::after {
+  content: " · Bash";
+}
+
+.hljs.bash figcaption + table::after {
+  display: none;
+}
+
+.hljs.css > table::after {
+  content: "CSS";
+}
+
+.hljs.css > figcaption > span::after {
+  content: " · CSS";
+}
+
+.hljs.css figcaption + table::after {
+  display: none;
+}
+
+.hljs.scss > table::after {
+  content: "Scss";
+}
+
+.hljs.scss > figcaption > span::after {
+  content: " · Scss";
+}
+
+.hljs.scss figcaption + table::after {
+  display: none;
+}
+
+.hljs.java > table::after {
+  content: "Java";
+}
+
+.hljs.java > figcaption > span::after {
+  content: " · Java";
+}
+
+.hljs.java figcaption + table::after {
+  display: none;
+}
+
+.hljs.xml > table::after {
+  content: "XML";
+}
+
+.hljs.xml > figcaption > span::after {
+  content: " · XML";
+}
+
+.hljs.xml figcaption + table::after {
+  display: none;
+}
+
+.hljs.python > table::after {
+  content: "Python";
+}
+
+.hljs.python > figcaption > span::after {
+  content: " · Python";
+}
+
+.hljs.python figcaption + table::after {
+  display: none;
+}
+
+.hljs.json > table::after {
+  content: "JSON";
+}
+
+.hljs.json > figcaption > span::after {
+  content: " · JSON";
+}
+
+.hljs.json figcaption + table::after {
+  display: none;
+}
+
+.hljs.swift > table::after {
+  content: "Swift";
+}
+
+.hljs.swift > figcaption > span::after {
+  content: " · Swift";
+}
+
+.hljs.swift figcaption + table::after {
+  display: none;
+}
+
+.hljs.ruby > table::after {
+  content: "Ruby";
+}
+
+.hljs.ruby > figcaption > span::after {
+  content: " · Ruby";
+}
+
+.hljs.ruby figcaption + table::after {
+  display: none;
+}
+
+.hljs.php > table::after {
+  content: "PHP";
+}
+
+.hljs.php > figcaption > span::after {
+  content: " · PHP";
+}
+
+.hljs.php figcaption + table::after {
+  display: none;
+}
+
+.hljs.c > table::after {
+  content: "C";
+}
+
+.hljs.c > figcaption > span::after {
+  content: " · C";
+}
+
+.hljs.c figcaption + table::after {
+  display: none;
+}
+
+.hljs.cpp > table::after {
+  content: "C++";
+}
+
+.hljs.cpp > figcaption > span::after {
+  content: " · C++";
+}
+
+.hljs.cpp figcaption + table::after {
+  display: none;
+}
+
+.hljs.scheme > table::after {
+  content: "Scheme";
+}
+
+.hljs.scheme > figcaption > span::after {
+  content: " · Scheme";
+}
+
+.hljs.scheme figcaption + table::after {
+  display: none;
+}
+
+.hljs.objectivec > table::after {
+  content: "Objective-C";
+}
+
+.hljs.objectivec > figcaption > span::after {
+  content: " · Objective-C";
+}
+
+.hljs.objectivec figcaption + table::after {
+  display: none;
+}
+
+.hljs.yml > table::after {
+  content: "YAML";
+}
+
+.hljs.yml > figcaption > span::after {
+  content: " · YAML";
+}
+
+.hljs.yml figcaption + table::after {
+  display: none;
+}
+
+.hljs.stylus > table::after {
+  content: "Stylus";
+}
+
+.hljs.stylus > figcaption > span::after {
+  content: " · Stylus";
+}
+
+.hljs.stylus figcaption + table::after {
+  display: none;
+}
+
+.hljs.sql > table::after {
+  content: "SQL";
+}
+
+.hljs.sql > figcaption > span::after {
+  content: " · SQL";
+}
+
+.hljs.sql figcaption + table::after {
+  display: none;
+}
+
+.hljs.http > table::after {
+  content: "HTTP";
+}
+
+.hljs.http > figcaption > span::after {
+  content: " · HTTP";
+}
+
+.hljs.http figcaption + table::after {
+  display: none;
+}
+
+.hljs.go > table::after {
+  content: "Go";
+}
+
+.hljs.go > figcaption > span::after {
+  content: " · Go";
+}
+
+.hljs.go figcaption + table::after {
+  display: none;
+}
+
+.hljs.kotlin > table::after {
+  content: "Kotlin";
+}
+
+.hljs.kotlin > figcaption > span::after {
+  content: " · Kotlin";
+}
+
+.hljs.kotlin figcaption + table::after {
+  display: none;
+}
+
+.hljs figcaption {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 2px 7px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #b1b1b1;
+  background: #f4efe1;
+  z-index: 20;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.hljs figcaption > a {
+  position: absolute;
+  right: 0;
+  display: inline-box;
+  margin-right: 7px;
+  font-weight: 400;
+}
+
+.hljs figcaption > a:hover {
+  text-decoration: none;
+  border: 0;
+}
+
+.hljs .line {
+  height: 20px;
+}
+
+.hljs table, .hljs tr, .hljs td {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+.hljs .hljs-ln-numbers {
+  color: #cacaca;
+  padding-right: 7px;
+  vertical-align: top;
+  word-break: normal;
+}
+
+.hljs .hljs-ln-code .hljs-comment,
+.hljs .hljs-ln-code .hljs-quote {
+  color: #93a1a1;
+}
+
+.hljs .hljs-ln-code .hljs-keyword,
+.hljs .hljs-ln-code .hljs-selector-tag,
+.hljs .hljs-ln-code .hljs-addition {
+  color: #859900;
+}
+
+.hljs .hljs-ln-code .hljs-number,
+.hljs .hljs-ln-code .hljs-string,
+.hljs .hljs-ln-code .hljs-meta .meta-string,
+.hljs .hljs-ln-code .hljs-literal,
+.hljs .hljs-ln-code .hljs-doctag,
+.hljs .hljs-ln-code .hljs-regexp {
+  color: #2aa198;
+}
+
+.hljs .hljs-ln-code .hljs-title,
+.hljs .hljs-ln-code .hljs-section,
+.hljs .hljs-ln-code .hljs-name,
+.hljs .hljs-ln-code .hljs-selector-id,
+.hljs .hljs-ln-code .hljs-selector-class {
+  color: #268bd2;
+}
+
+.hljs .hljs-ln-code .hljs-attribute,
+.hljs .hljs-ln-code .hljs-attr,
+.hljs .hljs-ln-code .hljs-variable,
+.hljs .hljs-ln-code .hljs-template-variable,
+.hljs .hljs-ln-code .hljs-class .title,
+.hljs .hljs-ln-code .hljs-type {
+  color: #b58900;
+}
+
+.hljs .hljs-ln-code .hljs-symbol,
+.hljs .hljs-ln-code .hljs-bullet,
+.hljs .hljs-ln-code .hljs-subst,
+.hljs .hljs-ln-code .hljs-meta,
+.hljs .hljs-ln-code .hljs-meta .keyword,
+.hljs .hljs-ln-code .hljs-selector-attr,
+.hljs .hljs-ln-code .hljs-selector-pseudo,
+.hljs .hljs-ln-code .hljs-link {
+  color: #cb4b16;
+}
+
+.hljs .hljs-ln-code .hljs-built_in,
+.hljs .hljs-ln-code .hljs-deletion {
+  color: #dc322f;
+}
