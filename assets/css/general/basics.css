@@ -17,7 +17,7 @@
     --shadow-base: 0 0 5px rgba(0, 0, 0, 0.2);
     --brand-color: #ff572f;
     --lighter-gray-color: #f6f6f6;
-    --darker-gray-color: #1a1a1a;
+    --darker-gray-color: #2f333c;
     --green-color: #28a745;
     --orange-color: #ffc107;
     --facebook-color: #3b5998;
@@ -76,6 +76,10 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+symbol {
+    fill: currentColor;
 }
 
 blockquote {

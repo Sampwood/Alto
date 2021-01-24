@@ -87,3 +87,8 @@
         margin-right: 0;
     }
 }
+
+.main-menu {
+    display: flex;
+    align-items: center;
+}

@@ -7,6 +7,11 @@
             {{#if @site.navigation}}
                 <nav class="main-menu hidden-xs hidden-sm hidden-md">
                     {{navigation}}
+                    <button class="button-icon menu-item-button js-modal" data-modal="search" aria-label="Search">
+                    <svg class="icon">
+                        <use xlink:href="#magnify"></use>
+                    </svg>
+                </button>
                 </nav>
             {{/if}}
         </div>

@@ -1,0 +1,29 @@
+.popular-wrapper {
+    padding: 1.25rem 0.9375rem 0.9375rem;
+}
+
+.popular-title {
+    margin-bottom: 0.625rem;
+    color: var(--secondary-text-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.dark-mode .popular-title {
+    color: var(--dark-mode-secondary-text-color);
+}
+
+.popular-feed {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popular {
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+.popular::before {
+    content: "#";
+}

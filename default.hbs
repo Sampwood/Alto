@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i,800">
 
     <script>
+        var siteUrl = '{{@site.url}}';
+    </script>
+
+    <script>
         if (localStorage.getItem('alto_dark') == 'true') {
             document.documentElement.classList.add('dark-mode');
         }
@@ -29,6 +33,7 @@
             {{{body}}}
         </div>
         {{> footer}}
+        {{> modal}}
     </div>
 
     <div class="dimmer"></div>
