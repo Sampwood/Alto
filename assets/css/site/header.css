@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Chancery';
+    font-weight: lighter;
+    font-style: normal;
+    src: url("../fonts/chancery/apple-chancery-webfont.eot");
+    src: local("Apple Chancery"), url("../fonts/chancery/apple-chancery-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/chancery/apple-chancery-webfont.woff2") format("woff2"), url("../fonts/chancery/apple-chancery-webfont.woff") format("woff"), url("../fonts/chancery/apple-chancery-webfont.ttf") format("truetype"), url("../fonts/chancery/apple-chancery-webfont.svg#apple-chancery") format("svg");
+}
+
 .site-header {
     backface-visibility: hidden;
     z-index: 80;
@@ -40,8 +48,10 @@
 }
 
 .logo-text {
-    font-size: 24px;
-    font-weight: 800;
+    color: #34495e;
+    font-family: Chancery, cursive, LiSu, sans-serif;
+    font-size: 32px;
+    font-weight: normal;
 }
 
 .sep {
