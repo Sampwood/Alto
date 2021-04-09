@@ -40,7 +40,7 @@ html {
 
 body {
     color: var(--primary-text-color);
-    font-family: Muli, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", Tahoma, "Hiragino Sans GB", "Heiti SC", Arial, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;;
     font-size: 16px;
     line-height: 1.65;
     text-rendering: optimizeLegibility;
